@@ -18,6 +18,7 @@ function checkBirthDateIsLucky() {
     const dob = dateOfBirth.value;
     const numberToCheck = luckyNumber.value
     if(dob && numberToCheck) {
+        const sum = calculateSum(dob)
     compareValues(sum, numberToCheck)
     } else {
     outputBox.innerText = "Please enter both fields";
