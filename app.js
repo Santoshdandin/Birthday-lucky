@@ -1,14 +1,19 @@
+var username = prompt("May I know your name?");
+var welcomemsg = "Welcome" + username;
+alert(welcomemsg);
+
 const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNumber = document.querySelector("#lucky-number");
 const checkNumberButton = document.querySelector("#check-number");
 const outputBox = document.querySelector("#output-box");
 
 
+
 function compareValues(sum, numberToCheck) {
     if(sum % numberToCheck ===0 ) {
-       outputBox.innerText = "your birthday is lucky 🎉";
+       outputBox.innerText = ( username + " Your birthday is lucky 🎉");
     }else {
-        outputBox.innerText = "your birthday is not lucky 😞";
+        outputBox.innerText = (username + " Your birthday is not lucky 😞");
     }
 }
 
@@ -35,5 +40,6 @@ function calculateSum(dob) {
 
     return sum;
 };
+
 
 checkNumberButton.addEventListener("click", checkBirthDateIsLucky);
